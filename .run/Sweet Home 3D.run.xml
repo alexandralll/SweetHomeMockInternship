@@ -1,5 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Sweet Home 3D" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/Downloads/jdk1.8.0_511.jdk/Contents/Home/jre" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="com.eteks.sweethome3d.SweetHome3D" />
     <module name="sweet-home-3d-internship" />
     <method v="2">
