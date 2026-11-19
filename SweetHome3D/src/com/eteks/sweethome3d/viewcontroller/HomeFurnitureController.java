@@ -53,7 +53,7 @@ public class HomeFurnitureController implements Controller {
    * The properties that may be edited by the view associated to this controller. 
    */
   public enum Property {ICON, NAME, NAME_VISIBLE, DESCRIPTION, PRICE, X, Y, ELEVATION, ANGLE_IN_DEGREES, BASE_PLAN_ITEM, 
-      WIDTH, DEPTH,  HEIGHT, PROPORTIONAL, COLOR, PAINT, SHININESS, VISIBLE, MODEL_MIRRORED, LIGHT_POWER, 
+      WIDTH, DEPTH, VOLUME, HEIGHT, PROPORTIONAL, COLOR, PAINT, SHININESS, VISIBLE, MODEL_MIRRORED, LIGHT_POWER,
       RESIZABLE, DEFORMABLE, TEXTURABLE}
   
   /**
@@ -87,6 +87,7 @@ public class HomeFurnitureController implements Controller {
   private Integer            angleInDegrees;
   private Float              angle;
   private Float              width;
+  private Float              volume;
   private Float              proportionalWidth;
   private Float              depth;
   private Float              proportionalDepth;
@@ -867,11 +868,19 @@ public class HomeFurnitureController implements Controller {
     }
   }
 
+  private void setVolume() {
+    this.volume = this.width * this.depth * this.height;
+  }
+
   /**
    * Returns the edited width.
    */
   public Float getWidth() {
     return this.width;
+  }
+
+  public Float getVolume() {
+    return this.volume;
   }
   
   /**
